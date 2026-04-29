@@ -3,10 +3,103 @@
     <title>me</title>
     <link href="https://me.10rino.net/feed.xml" rel="self" />
     <link href="https://me.10rino.net" />
-    <updated>1970-01-01T09:00:00+09:00</updated>
+    <updated>2026-04-29T15:34:24+09:00</updated>
     <author>
         <name>mozu</name>
     </author>
     <id>https://me.10rino.net</id>
 
+    <entry>
+        <title>memo</title>
+        <author>
+            <name>mozu</name>
+        </author>
+        <link href="https://me.10rino.net/20260429sitememo.html"/>
+        <id>https://me.10rino.net/20260429sitememo.html</id>
+            <category term="site"/>
+            <category term="memo"/>
+
+        <updated>2026-04-29T11:21:02+09:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    はじめに 現在のサイト構成、使用ツール等のメモ書きです。 更新があれば随時加筆修正します。&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="はじめに">はじめに</h2>
+<p>現在のサイト構成、使用ツール等のメモ書きです。
+更新があれば随時加筆修正します。</p><h3 id="まとめ">まとめ</h3>
+<ul>
+<li>CMS:Publii<ul>
+<li>テーマ:mono</li>
+<li>フォント<ul>
+<li>本文:メイリオ</li>
+<li>ロゴ,見出し:Orbitron,メイリオ</li>
+<li>その他:Jura</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ホスティング:GitHub Pages</li>
+</ul>
+<h2 id="cmsssg">CMS/SSG</h2>
+<p><a href="https://getpublii.com">Publii</a>
+：静的サイトジェネレーター（SSG）。公式にはStatic CMS。
+Hugoがこう……黒い画面で……文字がいっぱい……に抵抗感があるならおすすめです。</p><p>イメージとしては、アプリでダウンロードして、ローカルで作成したものをアップロードするWordPress。</p><p>テーマやプラグインの数だけならHugoやWPが断然有利ですが、<strong>静的ページを作成したい＋直感的に操作したい</strong>のどっちもやりたいのでPubliiにしてみました。</p><p><a href="https://github.com/GetPublii/Publii-ui-locales">日本語の翻訳もあります。</a>ありがとうございます！🎈</p><p>ブロックエディタ、マークダウンエディタ、WYSIWYGエディタが選べるのもよかった。
+マークダウンよりWYSIWYGが好きなので……
+投稿ではHTMLコードも直接編集できるので、ルビやクラスを追加したりもできる。
+あんまり使うかはわからないけども……。</p><p>Google Fontsから好きなフォントも選べるし、
+選択できない日本語フォントは、カスタムHTML・CSS機能で直接追加しました。</p><p>サイトまるごとの設定でrobots.txtが、
+ページごとにnoindex,nofollow等も設定可能でした。</p><p>robots.txtで検索サイトへの表示を許可した場合でも、
+ ChatGPTのボットだけ拒否する細かい設定も可能です。
+自分で書くこともできるみたいです。今回はざっくり指定しかしていません。</p><pre><code>User-agent: *
+Disallow: /
+</code></pre>
+<p>手元でビルドしてFTPでアップロードする方法もあり、
+最悪何もわからんでも、手打ちHTMLができて
+レンタルサーバーにアップロードできるなら、
+何とかできる安心感が…初心者には安心……。</p><p>ブログとしてならfeed.xmlも出せます。出さないこともできます。
+こういうかなり細かい設定が、ボタンをポチポチしてできるのがいいな……と思いました。</p><p>投稿（post）と固定ページの作成ができます。
+今は固定ページとして作成したものをホームページに設定しています。
+WPと同じ感じ。結構ウェブサイトっぽくなるのではないでしょうか！？</p><p>メニューで投稿一覧へのリンクができるはずなのですが、
+バグか、そもそも出力されていないか？で、うまくいかず、
+著者リンクで代用しています。
+自分がどこかで設定したのかも…。見逃しているので、有識者、求ム……( ；∀；)</p><h3 id="テーマ">テーマ</h3>
+<p><a href="https://marketplace.getpublii.com/themes/mono/">Mono</a>
+：シンプルでいい感じかなと選びました。公式チームが出している無料テーマ。</p><p>メインカラーは数色選べますが、自分で指定可能です。
+#9B8EC7を設定しました。</p><p>フォントはサイト設定から設定できるものの他、カスタムCSSからも設定しています。
+メイリオのウェイトがちょっと軽めなので見づらさを感じるかも…
+公式でフォント追加方法もあるので、やってみようと思います。</p><p>カスタムCSSの設定</p><pre><code>:root {
+  --font-heading: &#39;Orbitron&#39;, &#39;メイリオ&#39;, Meiryo, sans-serif;
+  --font-entry: &#39;メイリオ&#39;, Meiryo, sans-serif;
+  --font-menu: var(--font-entry);
+}
+</code></pre>
+<p><del>カスタムHTMLを使ってGoogle Fonts から直接引っ張ってきてもいいと思うけどな……</del></p><h3 id="プラグイン">プラグイン</h3>
+<p><a href="https://marketplace.getpublii.com/plugins/feather-icons/">Feather Icons</a>
+：monoテーマでサポートしているアイコン。
+メニュー部分がアイコンになるのがかわいくてお気に入り。</p><p><a href="https://marketplace.getpublii.com/plugins/syntax-highlighter/">Syntax Highlighter</a>
+：Prism.jsが使えるようになります。
+投稿でコードエディタが使えるのですが、その部分に反映されます。
+コードの色が変わると……嬉しい……。</p><h2 id="ホスティング">ホスティング</h2>
+<p>Github pagesにしました。
+<a href="https://github.com/10rin0/me">https://github.com/10rin0/me</a></p><p><a href="https://getpublii.com/docs/host-static-website-github-pages.html">Publii 公式のドキュメント</a>に説明があります。</p><p>画像付きなので、かなりわかりやすく、書いてある通りにすればほとんどすべての設定が出来ます。
+更新が2年前なので多少異なる部分もありますが、文言はそのままなので、
+単語を拾えばたどり着きます。誤差。</p><p>私は自分のドメインがあるので設定しましたが、
+Github pagesならドメインを持っていなくてもページが公開できます。</p><p>＠GitHub Pages/カスタム ドメインを構成する/カスタム ドメインを管理する」の項目で
+説明されている通りにするといけました。</p><p><a href="https://getpublii.com/docs/configure-cloudflare-pages-with-publii.html">CloudFlareでも公開できるらしい</a>のですが、
+どっちにしろGithubを仲介する必要があるようなので、
+それならGithub pagesでいいか……と思っています。</p><p>CloudFlareを使用した場合は、Githubリポジトリはプライベートでいいみたいです。</p><h2 id="ドメイン">ドメイン</h2>
+<ul>
+<li>レジストラ：スタードメイン</li>
+<li>ネームサーバ：CloudFlare</li>
+</ul>
+<p>元々ネットオウルのドメインで取得しました。
+他サイトとの兼ね合い等も考えて、CloudFlareを使うことにしてみました。
+まだ移管はしてないですが、検討中です。</p><h2 id="おわりに">おわりに</h2>
+<p>しばらくはテーマ設定の中でカスタムしながら使ってみようと思います。</p>
+            ]]>
+        </content>
+    </entry>
 </feed>
