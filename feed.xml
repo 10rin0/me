@@ -3,7 +3,7 @@
     <title>me</title>
     <link href="https://me.10rino.net/feed.xml" rel="self" />
     <link href="https://me.10rino.net" />
-    <updated>2026-04-29T15:34:24+09:00</updated>
+    <updated>2026-06-27T13:46:00+09:00</updated>
     <author>
         <name>mozu</name>
     </author>
@@ -76,7 +76,9 @@ WPと同じ感じ。結構ウェブサイトっぽくなるのではないでし
   --font-menu: var(--font-entry);
 }
 </code></pre>
-<p><del>カスタムHTMLを使ってGoogle Fonts から直接引っ張ってきてもいいと思うけどな……</del></p><h3 id="プラグイン">プラグイン</h3>
+<p><del>カスタムHTMLを使ってGoogle Fonts から直接引っ張ってきてもいいと思うけどな……</del></p><p>（20260627追記）
+日本語フォントはGoogle FontsからM PLUS Uを使用しました。
+こっちのほうが早くて便利そうだったので……</p><h3 id="プラグイン">プラグイン</h3>
 <p><a href="https://marketplace.getpublii.com/plugins/feather-icons/">Feather Icons</a>
 ：monoテーマでサポートしているアイコン。
 メニュー部分がアイコンになるのがかわいくてお気に入り。</p><p><a href="https://marketplace.getpublii.com/plugins/syntax-highlighter/">Syntax Highlighter</a>
