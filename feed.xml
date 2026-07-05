@@ -3,12 +3,33 @@
     <title>me</title>
     <link href="https://me.10rino.net/feed.xml" rel="self" />
     <link href="https://me.10rino.net" />
-    <updated>2026-06-27T13:46:00+09:00</updated>
+    <updated>2026-07-05T16:48:19+09:00</updated>
     <author>
         <name>mozu</name>
     </author>
     <id>https://me.10rino.net</id>
 
+    <entry>
+        <title>Publiiで同人サイトを作った</title>
+        <author>
+            <name>mozu</name>
+        </author>
+        <link href="https://me.10rino.net/20260705publiisite.html"/>
+        <id>https://me.10rino.net/20260705publiisite.html</id>
+            <category term="memo"/>
+
+        <updated>2026-07-05T16:02:40+09:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    あ
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>あ</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>memo</title>
         <author>
